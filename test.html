@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Fun Hub | Engaging Educational Tools for Kids</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .age-group-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        #quiz-container {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-book-open text-blue-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-blue-600">Learning Fun Hub</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">How It Works</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Testimonials</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Pricing</a>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Try for Free
+                    </button>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Features</a>
+                <a href="#how-it-works" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">How It Works</a>
+                <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Testimonials</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                        Make Learning Fun for Your Child
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Engaging quizzes, interactive lessons, and educational games that kids love and parents trust. 
+                        Watch your child develop a passion for learning!
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium shadow-md">
+                            Start Free Trial
+                        </button>
+                        <button class="bg-white hover:bg-gray-50 text-blue-600 px-6 py-3 rounded-lg text-lg font-medium border border-blue-600 shadow-md">
+                            See How It Works
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <img src="https://illustrations.popsy.co/amber/digital-nomad.svg" alt="Kids learning" class="w-full h-auto">
+                        <div class="absolute -bottom-6 -left-6 bg-yellow-100 p-4 rounded-xl shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-yellow-400 rounded-full p-2 mr-3">
+                                    <i class="fas fa-star text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">5,000+</p>
+                                    <p class="text-sm">Happy Kids</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 mb-8">Trusted by parents and schools worldwide</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">
+                <img src="https://logo.clearbit.com/nationalgeographic.com" alt="National Geographic" class="h-12 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                <img src="https://logo.clearbit.com/pbs.org" alt="PBS" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                <img src="https://logo.clearbit.com/duolingo.com" alt="Duolingo" class="h-12 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                <img src="https://logo.clearbit.com/abc.net.au" alt="ABC" class="h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+                <img src="https://logo.clearbit.com/sesamestreet.org" alt="Sesame Street" class="h-12 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Learning Made Exciting</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our platform combines education with entertainment to create an engaging learning experience for children of all ages.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all duration-300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-gamepad text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Educational Games</h3>
+                    <p class="text-gray-600 mb-4">
+                        Fun games that teach math, reading, science and more. Kids learn without even realizing it!
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all duration-300">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-question-circle text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Interactive Quizzes</h3>
+                    <p class="text-gray-600 mb-4">
+                        Adaptive quizzes that adjust difficulty based on your child's progress and learning pace.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all duration-300">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book-open text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Storytelling Tools</h3>
+                    <p class="text-gray-600 mb-4">
+                        Creative tools that help children develop language skills through interactive storytelling.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Quiz Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Try Our Interactive Quiz</h2>
+                <p class="text-lg text-gray-600">
+                    Experience how we make learning fun with this sample quiz. Perfect for kids aged 6-10!
+                </p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                <div class="mb-6 flex justify-center space-x-2">
+                    <button class="age-group-btn px-4 py-2 rounded-full border border-blue-500 text-blue-500 active" data-age="6-8">
+                        6-8 years
+                    </button>
+                    <button class="age-group-btn px-4 py-2 rounded-full border border-blue-500 text-blue-500" data-age="9-10">
+                        9-10 years
+                    </button>
+                    <button class="age-group-btn px-4 py-2 rounded-full border border-blue-500 text-blue-500" data-age="11-12">
+                        11-12 years
+                    </button>
+                </div>
+                
+                <div id="quiz-container" class="bg-white p-6 rounded-lg shadow-md">
+                    <div id="quiz-question" class="mb-6">
+                        <h3 class="text-xl font-bold mb-4">What is 5 + 7?</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button class="quiz-answer bg-gray-100 hover:bg-blue-100 p-4 rounded-lg border border-gray-200 text-left" data-correct="false">
+                                10
+                            </button>
+                            <button class="quiz-answer bg-gray-100 hover:bg-blue-100 p-4 rounded-lg border border-gray-200 text-left" data-correct="false">
+                                11
+                            </button>
+                            <button class="quiz-answer bg-gray-100 hover:bg-blue-100 p-4 rounded-lg border border-gray-200 text-left" data-correct="true">
+                                12
+                            </button>
+                            <button class="quiz-answer bg-gray-100 hover:bg-blue-100 p-4 rounded-lg border border-gray-200 text-left" data-correct="false">
+                                13
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="quiz-feedback" class="hidden">
+                        <div class="p-4 rounded-lg mb-6" id="feedback-content">
+                            <!-- Feedback will be inserted here -->
+                        </div>
+                        <button id="next-question" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg">
+                            Next Question
+                        </button>
+                    </div>
+                    
+                    <div id="quiz-complete" class="hidden text-center py-8">
+                        <i class="fas fa-trophy text-yellow-500 text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">Great Job!</h3>
+                        <p class="text-gray-600 mb-6">You completed the sample quiz. Imagine hundreds more like this tailored to your child's level!</p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
+                            Start Full Experience
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">How Learning Fun Hub Works</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Simple steps to get your child excited about learning
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mb-6 text-blue-600 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-bold mb-3">Sign Up</h3>
+                    <p class="text-gray-600">
+                        Create an account and tell us about your child's age and interests.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mb-6 text-green-600 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-bold mb-3">Personalize Learning</h3>
+                    <p class="text-gray-600">
+                        Our system adapts to your child's skill level and learning style.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mb-6 text-purple-600 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-bold mb-3">Watch Them Learn</h3>
+                    <p class="text-gray-600">
+                        See progress reports and enjoy your child's excitement for learning.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold mb-4">Parent Dashboard</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our comprehensive parent dashboard lets you track your child's progress, set learning goals, and manage their experience.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Detailed progress reports</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Time management tools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Custom learning paths</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Reward system controls</span>
+                            </li>
+                        </ul>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
+                            See Sample Dashboard
+                        </button>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                        <img src="https://illustrations.popsy.co/amber/designer.svg" alt="Parent dashboard" class="w-full h-auto max-w-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What Parents Are Saying</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Don't just take our word for it - hear from parents who've seen the difference
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-4">SM</div>
+                        <div>
+                            <h4 class="font-bold">Sarah M.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "My 7-year-old actually asks to do the math games now! His grades have improved and he's so much more confident."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold mr-4">DJ</div>
+                        <div>
+                            <h4 class="font-bold">David J.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "The storytelling tools have been amazing for my daughter's creativity and vocabulary. She writes her own stories now!"
+                    </p>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold mr-4">PT</div>
+                        <div>
+                            <h4 class="font-bold">Priya T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Finally an educational app that doesn't feel like a battle to get my son to use. The science games are his favorite."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Simple, Affordable Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Choose the plan that works for your family. Cancel anytime.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold mb-4">Starter</h3>
+                    <p class="text-4xl font-bold mb-6">$7.99<span class="text-lg text-gray-500 font-normal">/month</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Access to all basic games</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>100+ educational quizzes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>1 child profile</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="fas fa-times mt-1 mr-2"></i>
+                            <span>Advanced progress tracking</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium">
+                        Get Started
+                    </button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-blue-500 relative">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Family</h3>
+                    <p class="text-4xl font-bold mb-6">$12.99<span class="text-lg text-gray-500 font-normal">/month</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>All Starter features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Up to 3 child profiles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Advanced progress tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Premium content access</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
+                        Get Started
+                    </button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold mb-4">Annual</h3>
+                    <p class="text-4xl font-bold mb-6">$99<span class="text-lg text-gray-500 font-normal">/year</span></p>
+                    <p class="text-blue-600 font-medium mb-4">Save 36%</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>All Family features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Up to 5 child profiles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Priority customer support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Exclusive bonus content</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-medium">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-gray-600">
+                <p>All plans come with a 14-day free trial. No credit card required.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Child's Learning Experience?</h2>
+            <p class="text-xl mb-8 opacity-90">
+                Join thousands of parents who are making learning fun and effective for their kids.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg text-lg font-medium shadow-md">
+                    Start Free Trial
+                </button>
+                <button class="bg-transparent hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-medium border-2 border-white">
+                    Talk to Our Experts
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">
+                    Everything you need to know about Learning Fun Hub
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left hover:bg-gray-50">
+                        <span class="text-lg font-medium">What age group is this suitable for?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 border-t border-gray-200">
+                        <p class="text-gray-600">
+                            Learning Fun Hub is designed for children aged 4-12. Our content is divided into age-appropriate categories, with different difficulty levels and teaching approaches for each developmental stage.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left hover:bg-gray-50">
+                        <span class="text-lg font-medium">How much screen time will this require?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 border-t border-gray-200">
+                        <p class="text-gray-600">
+                            We recommend age-appropriate screen time limits. Our platform includes built-in timers and reminders. Most activities are designed to be effective in 15-30 minute sessions, and our parent dashboard helps you manage usage.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left hover:bg-gray-50">
+                        <span class="text-lg font-medium">Is this aligned with school curricula?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 border-t border-gray-200">
+                        <p class="text-gray-600">
+                            Yes! Our content is developed by educators and aligns with Common Core and other major educational standards. Many teachers use our platform to supplement classroom learning.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left hover:bg-gray-50">
+                        <span class="text-lg font-medium">Can I try before I buy?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 border-t border-gray-200">
+                        <p class="text-gray-600">
+                            Absolutely! We offer a 14-day free trial with full access to all features. No credit card is required to start the trial, so you can see the value before committing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-book-open text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Learning Fun Hub</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Making learning fun and effective for children everywhere.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    © 2023 Learning Fun Hub. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Age Selection Modal -->
+    <div id="age-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold mb-4">Select Your Child's Age</h3>
+            <p class="text-gray-600 mb-6">We'll customize the experience based on your child's age group.</p>
+            
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <button class="age-option py-3 px-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200">
+                    <div class="font-medium">4-5 years</div>
+                    <div class="text-sm text-gray-500">Pre-K</div>
+                </button>
+                <button class="age-option py-3 px-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200">
+                    <div class="font-medium">6-8 years</div>
+                    <div class="text-sm text-gray-500">Early Elementary</div>
+                </button>
+                <button class="age-option py-3 px-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200">
+                    <div class="font-medium">9-10 years</div>
+                    <div class="text-sm text-gray-500">Upper Elementary</div>
+                </button>
+                <button class="age-option py-3 px-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200">
+                    <div class="font-medium">11-12 years</div>
+                    <div class="text-sm text-gray-500">Middle School</div>
+                </button>
+            </div>
+            
+            <div class="flex justify-end space-x-3">
+                <button id="close-modal" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
+                    Close
+                </button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Quiz functionality
+        const quizAnswers = document.querySelectorAll('.quiz-answer');
+        const quizFeedback = document.getElementById('quiz-feedback');
+        const quizQuestion = document.getElementById('quiz-question');
+        const quizComplete = document.getElementById('quiz-complete');
+        const nextQuestionBtn = document.getElementById('next-question');
+        const feedbackContent = document.getElementById('feedback-content');
+        
+        quizAnswers.forEach(answer => {
+            answer.addEventListener('click', function() {
+                const isCorrect = this.getAttribute('data-correct') === 'true';
+                
+                if (isCorrect) {
+                    this.classList.add('bg-green-100', 'border-green-400');
+                    feedbackContent.innerHTML = `
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-2xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-green-800 mb-1">Correct! Great job!</h4>
+                                <p class="text-gray-700">You got it right! 5 + 7 equals 12. Keep up the good work!</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    this.classList.add('bg-red-100', 'border-red-400');
+                    feedbackContent.innerHTML = `
+                        <div class="flex items-start">
+                            <i class="fas fa-times-circle text-red-500 text-2xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-red-800 mb-1">Almost there!</h4>
+                                <p class="text-gray-700">The correct answer is 12. Remember, 5 + 7 is the same as 5 + 5 + 2!</p>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                quizQuestion.classList.add('hidden');
+                quizFeedback.classList.remove('hidden');
+            });
+        });
+
+        nextQuestionBtn.addEventListener('click', function() {
+            quizFeedback.classList.add('hidden');
+            quizComplete.classList.remove('hidden');
+        });
+
+        // Age group buttons
+        const ageGroupBtns = document.querySelectorAll('.age-group-btn');
+        ageGroupBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                ageGroupBtns.forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
+                this.classList.add('active', 'bg-blue-600', 'text-white');
+                
+                // In a real app, we would load new quiz questions here
+            });
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Age selection modal
+        const ageModal = document.getElementById('age-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        
+        // Show modal when "Start Free Trial" is clicked
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent.includes('Start Free Trial')) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    ageModal.classList.remove('hidden');
+                });
+            }
+        });
+
+        closeModalBtn.addEventListener('click', function() {
+            ageModal.classList.add('hidden');
+        });
+
+        // Age option selection
+        const ageOptions = document.querySelectorAll('.age-option');
+        ageOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                ageOptions.forEach(opt => opt.classList.remove('bg-blue-100', 'border-blue-400'));
+                this.classList.add('bg-blue-100', 'border-blue-400');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
