@@ -10,7 +10,9 @@ const questions = [
   },
 ];
 
-export default function DemoQuiz() {
+export default function DemoQuiz(props: any) {
+  const lang = props.lang;
+  
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -36,7 +38,7 @@ export default function DemoQuiz() {
   };
 
   return (
-    <section className="py-16 bg-white text-black">
+    <section id="TryQuiz" className="py-16 bg-white text-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">

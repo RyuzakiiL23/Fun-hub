@@ -32,7 +32,8 @@ const features = [
   },
 ];
 
-const HomeSections: FC = () => {
+ export default function HomeSections (props: any) {
+  const lang = props.lang;
   return (
     <>
       {/* Hero Section */}
@@ -85,7 +86,7 @@ const HomeSections: FC = () => {
       </section>
 
       {/* Trusted By Section */}
-      <section className="bg-white py-12">
+      {/* <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-500 mb-8">
             Trusted by parents and schools worldwide
@@ -116,7 +117,7 @@ const HomeSections: FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
       <section id="features" className="py-16 bg-gray-50 ">
@@ -158,5 +159,3 @@ const HomeSections: FC = () => {
     </>
   );
 };
-
-export default HomeSections;

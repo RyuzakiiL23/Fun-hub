@@ -1,6 +1,7 @@
 import { FaCheck, FaTimes } from "react-icons/fa";
 
-const PricingSection = () => {
+const PricingSection = (props: any) => {
+  const lang = props.lang;
   return (
     <section id="pricing" className="py-16 bg-gray-50 text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

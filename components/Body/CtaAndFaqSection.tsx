@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import { MdArrowDownward } from 'react-icons/md';
 
-const CtaAndFaqSection: React.FC = () => {
+export default function CtaAndFaqSection (props: any) {
+  const lang = props.lang;
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -32,7 +33,7 @@ const CtaAndFaqSection: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white text-black">
+      <section id="FAQ" className="py-16 bg-white text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
@@ -90,4 +91,3 @@ const faqData = [
   },
 ];
 
-export default CtaAndFaqSection;

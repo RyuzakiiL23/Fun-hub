@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { FaBookOpen, FaBars } from 'react-icons/fa';
 
-const Nav: React.FC = () => {
+const Nav: React.FC = (props: any) => {
+  const lang = props.lang;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -16,19 +17,20 @@ const Nav: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo + Title */}
-          <div className="flex items-center cursor-pointer">
+          <Link href="#home" className="flex items-center cursor-pointer">
             <div className="flex-shrink-0 flex items-center">
               <FaBookOpen className="text-blue-500 text-2xl mr-2" />
               <span className="text-xl font-bold text-blue-600">Learning Fun Hub</span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
             <Link href="#features" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</Link>
+            <Link href="#TryQuiz" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Try Quiz</Link>
             <Link href="#how-it-works" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">How It Works</Link>
-            <Link href="#testimonials" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Testimonials</Link>
-            <Link href="#pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Pricing</Link>
+            <Link href="#Dashboard" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Dashboard</Link>
+            <Link href="#FAQ" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">FAQ</Link>
           </div>
 
           {/* CTA Button */}
