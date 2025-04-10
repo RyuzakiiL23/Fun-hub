@@ -18,9 +18,9 @@ export default async function page(
     lang
   } = params;
 
-  const t = await getDictionary(lang);
+  const t = await getDictionary(lang) || "ar";
   return (
-    <div>
+    <div dir='rtl'>
       <HomeSections lang={t}/>
       <DemoQuiz lang={t}/>
       <HowItWorksSection lang={t}/>

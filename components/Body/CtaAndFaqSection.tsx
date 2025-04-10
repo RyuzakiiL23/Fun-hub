@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { MdArrowDownward } from 'react-icons/md';
 
-export default function CtaAndFaqSection (props: any) {
+export default function CtaAndFaqSection(props: any) {
   const lang = props.lang;
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -12,33 +12,33 @@ export default function CtaAndFaqSection (props: any) {
 
   return (
     <>
-      {/* CTA Section */}
+      {/* قسم الدعوة لاتخاذ إجراء (CTA) */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
-            Ready to Transform Your Child&apos;s Learning Experience?
+            هل أنت مستعد لتحويل تجربة تعلم طفلك؟
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of parents who are making learning fun and effective for their kids.
+            انضم إلى آلاف الآباء الذين يجعلون التعلم ممتعًا وفعالًا لأطفالهم.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <button className="cursor-pointer bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg text-lg font-medium shadow-md">
-              Start Free Trial
+              ابدأ الفترة التجريبية المجانية
             </button>
             <button className="cursor-pointer bg-transparent hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-medium border-2 border-white">
-              Talk to Our Experts
+              تحدث مع خبرائنا
             </button>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* قسم الأسئلة الشائعة */}
       <section id="FAQ" className="py-16 bg-white text-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">الأسئلة الشائعة</h2>
             <p className="text-lg text-gray-600">
-              Everything you need to know about Learning Fun Hub
+              كل ما تحتاج معرفته حول Learning Fun Hub
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export default function CtaAndFaqSection (props: any) {
                   onClick={() => toggleFaq(index)}
                 >
                   <span className="text-lg font-medium">{faq.question}</span>
-                   <MdArrowDownward
+                  <MdArrowDownward
                     className={`transition-transform ${activeFaq === index ? 'rotate-180' : ''}`}
                   />
                 </button>
@@ -70,24 +70,23 @@ export default function CtaAndFaqSection (props: any) {
 
 const faqData = [
   {
-    question: "What age group is this suitable for?",
+    question: "ما الفئة العمرية المناسبة لهذا البرنامج؟",
     answer:
-      "Learning Fun Hub is designed for children aged 4-12. Our content is divided into age-appropriate categories, with different difficulty levels and teaching approaches for each developmental stage.",
+      "تم تصميم Learning Fun Hub للأطفال من سن 4 إلى 12 عامًا. يتم تقسيم المحتوى حسب الفئة العمرية، مع مستويات صعوبة مختلفة وأساليب تعليمية مناسبة لكل مرحلة.",
   },
   {
-    question: "How much screen time will this require?",
+    question: "كم من الوقت سيقضيه الطفل أمام الشاشة؟",
     answer:
-      "We recommend age-appropriate screen time limits. Our platform includes built-in timers and reminders. Most activities are designed to be effective in 15-30 minute sessions, and our parent dashboard helps you manage usage.",
+      "نوصي بتحديد وقت الشاشة بناءً على عمر الطفل. منصتنا تتضمن مؤقتات وتنبيهات مدمجة. معظم الأنشطة مصممة لتكون فعالة خلال جلسات تتراوح من 15 إلى 30 دقيقة، كما تساعدك لوحة تحكم أولياء الأمور على إدارة الاستخدام.",
   },
   {
-    question: "Is this aligned with school curricula?",
+    question: "هل المحتوى متوافق مع المناهج الدراسية؟",
     answer:
-      "Yes! Our content is developed by educators and aligns with Common Core and other major educational standards. Many teachers use our platform to supplement classroom learning.",
+      "نعم! يتم تطوير المحتوى من قبل معلمين ويتماشى مع معايير التعليم الأساسية (Common Core) وغيرها من المعايير التعليمية المعتمدة. يستخدم العديد من المعلمين منصتنا لدعم التعلم في الصف.",
   },
   {
-    question: "Can I try before I buy?",
+    question: "هل يمكنني التجربة قبل الاشتراك؟",
     answer:
-      "Absolutely! We offer a 14-day free trial with full access to all features. No credit card is required to start the trial, so you can see the value before committing.",
+      "بالطبع! نحن نقدم فترة تجريبية مجانية لمدة 14 يومًا مع إمكانية الوصول الكامل إلى جميع الميزات. لا تحتاج إلى بطاقة ائتمان لبدء التجربة، لذا يمكنك تقييم القيمة قبل الاشتراك.",
   },
 ];
-

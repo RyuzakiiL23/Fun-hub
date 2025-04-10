@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { FC } from "react";
 import { FaStar } from "react-icons/fa6";
 import {
   FaGamepad,
@@ -8,27 +7,51 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
+// const features = [
+//   {
+//     icon: <FaGamepad className="text-blue-600 text-4xl" />,
+//     color: "bg-blue-200",
+//     title: "Educational Games",
+//     description:
+//       "Fun games that teach math, reading, science and more. Kids learn without even realizing it!",
+//   },
+//   {
+//     icon: <FaQuestionCircle className="text-green-600 text-4xl" />,
+//     color: "bg-green-200",
+//     title: "Interactive Quizzes",
+//     description:
+//       "Adaptive quizzes that adjust difficulty based on your child's progress and learning pace.",
+//   },
+//   {
+//     icon: <FaBookOpen className="text-purple-600 text-4xl" />,
+//     color: "bg-purple-200",
+//     title: "Storytelling Tools",
+//     description:
+//       "Creative tools that help children develop language skills through interactive storytelling.",
+//   },
+// ];
+
 const features = [
   {
     icon: <FaGamepad className="text-blue-600 text-4xl" />,
     color: "bg-blue-200",
-    title: "Educational Games",
+    title: "ألعاب تعليمية",
     description:
-      "Fun games that teach math, reading, science and more. Kids learn without even realizing it!",
+      "ألعاب ممتعة كتعلم الرياضيات، القراءة، العلوم وأكثر. ولادك كيتعلمو بلا ما يحسو!",
   },
   {
     icon: <FaQuestionCircle className="text-green-600 text-4xl" />,
     color: "bg-green-200",
-    title: "Interactive Quizzes",
+    title: "اختبارات تفاعلية",
     description:
-      "Adaptive quizzes that adjust difficulty based on your child's progress and learning pace.",
+      "اختبارات كتبدل فالصعوبة على حساب تقدم ولدك وطريقته فالتعلم.",
   },
   {
     icon: <FaBookOpen className="text-purple-600 text-4xl" />,
     color: "bg-purple-200",
-    title: "Storytelling Tools",
+    title: "أدوات الحكاية",
     description:
-      "Creative tools that help children develop language skills through interactive storytelling.",
+      "أدوات كتشجع الأطفال يطورو مهارات اللغة عبر قصص تفاعلية وممتعة.",
   },
 ];
 
@@ -42,19 +65,24 @@ const features = [
           <div className="md:flex md:items-center md:justify-between">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                Make Learning Fun for Your Child
+                {/* Make Learning Fun for Your Child */}
+                خلي التعلم متعة لولدك
               </h1>
               <p className="text-lg text-gray-700 mb-8">
-                Engaging quizzes, interactive lessons, and educational games
+                {/* Engaging quizzes, interactive lessons, and educational games
                 that kids love and parents trust. Watch your child develop a
-                passion for learning!
+                passion for learning! */}
+                  اختبارات مشوقة، دروس تفاعلية، وألعاب تعليمية كيعشقوها الأطفال وتيقتهم الآباء. شوف ولدك كيطور حب للتعلم!
+
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium shadow-md">
-                  Start Free Trial
+                  {/* Start Free Trial */}
+                   جرب مجانا
                 </button>
                 <button className="bg-white cursor-pointer hover:bg-gray-50 text-blue-600 px-6 py-3 rounded-lg text-lg font-medium border border-blue-600 shadow-md">
-                  See How It Works
+                  {/* See How It Works */}
+                   شوف كيفاش خدام
                 </button>
               </div>
             </div>
@@ -75,7 +103,8 @@ const features = [
                     </div>
                     <div className="text-black">
                       <p className="font-bold">5,000+</p>
-                      <p className="text-sm">Happy Kids</p>
+                      {/* <p className="text-sm">Happy Kids</p> */}
+                      <p className="text-sm">أطفال فرحانين</p>
                     </div>
                   </div>
                 </div>
@@ -124,11 +153,14 @@ const features = [
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Learning Made Exciting
+            {/* Learning Made Exciting */}
+            خليه يتعلم وهو فرحان
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our platform combines education with entertainment to create an
-            engaging learning experience for children of all ages.
+            {/* Our platform combines education with entertainment to create an
+            engaging learning experience for children of all ages. */}
+              المنصة ديالنا كدمج التعليم مع الترفيه باش تولي تجربة التعلم زوينة وممتعة للأطفال من جميع الأعمار.
+
           </p>
         </div>
 
@@ -149,7 +181,7 @@ const features = [
                 href="#"
                 className="text-blue-600 font-medium inline-flex items-center"
               >
-                Learn more <FaArrowRight className="ml-2" />
+                تعرف أكثر <FaArrowRight className="ml-2" />
               </a>
             </div>
           ))}

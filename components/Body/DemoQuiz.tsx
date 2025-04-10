@@ -1,10 +1,10 @@
-'use client'
+'use client';
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 const questions = [
   {
-    question: "What is 5 + 7?",
+    question: "شحال كتسوى 5 + 7؟",
     options: ["10", "11", "12", "13"],
     correctIndex: 2,
   },
@@ -12,7 +12,6 @@ const questions = [
 
 export default function DemoQuiz(props: any) {
   const lang = props.lang;
-  
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -38,81 +37,89 @@ export default function DemoQuiz(props: any) {
   };
 
   return (
-    <section id="TryQuiz" className="py-16 bg-white text-black">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="TryQuiz" className="bg-gradient-to-br from-[#f0f9ff] via-[#e0f2fe] to-[#bae6fd] py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Try Our Interactive Quiz
-          </h2>
-          <p className="text-lg text-gray-600">
-            Experience how we make learning fun with this sample quiz. Perfect for kids aged 6-10!
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">جرب الكويز التفاعلي ديالنا</h2>
+          <p className="text-lg text-gray-700">
+            شوف كيفاش كنخليو التعلم ممتع بهاد الكويز النموذجي. مناسب للأطفال من 6 حتى لـ 10 سنين!
           </p>
         </div>
 
-        <div className="bg-gray-50 p-6 rounded-xl shadow-inner">
-          <div className="mb-6 flex justify-center space-x-2">
+        <div className="bg-white p-8 rounded-2xl shadow-xl">
+          <div className="flex justify-center mb-8 space-x-2 rtl:space-x-reverse">
             {["6-8", "9-10", "11-12"].map((age) => (
               <button
                 key={age}
                 onClick={() => setAgeGroup(age)}
-                className={`px-4 cursor-pointer py-2 rounded-full border border-blue-500 text-blue-500 ${
-                  ageGroup === age ? "bg-blue-500 text-white" : ""
+                className={`px-5 py-2 text-sm font-medium rounded-full border transition ${
+                  ageGroup === age
+                    ? "bg-blue-600 text-white border-blue-600"
+                    : "text-blue-600 border-blue-400 hover:bg-blue-100"
                 }`}
               >
-                {age} years
+                {age} سنوات
               </button>
             ))}
           </div>
 
           {!quizComplete ? (
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="mb-6">
-                <h3 className="text-xl font-bold mb-4">{current.question}</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {current.options.map((option, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleAnswer(idx)}
-                      className={`quiz-answer cursor-pointer bg-gray-100 hover:bg-blue-100 p-4 rounded-lg border border-gray-200 text-left ${
-                        selectedOption === idx ? (idx === current.correctIndex ? "border-green-500" : "border-red-500") : ""
-                      }`}
-                    >
-                      {option}
-                    </button>
-                  ))}
-                </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                {current.question}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                {current.options.map((option, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleAnswer(idx)}
+                    className={`text-lg p-4 rounded-xl border transition duration-200 text-gray-700 text-center shadow-sm hover:shadow-md ${
+                      selectedOption === idx
+                        ? idx === current.correctIndex
+                          ? "bg-green-100 border-green-500"
+                          : "bg-red-100 border-red-500"
+                        : "bg-gray-50 border-gray-200 hover:bg-blue-50"
+                    }`}
+                  >
+                    {option}
+                  </button>
+                ))}
               </div>
 
               {showFeedback && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="p-4 rounded-lg mb-6 bg-gray-100"
+                  className="mb-6 text-center"
                 >
-                  <p className="text-lg">
-                    {selectedOption === current.correctIndex ? "Correct! 🎉" : "Oops! That's not right."}
+                  <p className="text-lg font-medium text-gray-800">
+                    {selectedOption === current.correctIndex
+                      ? "صحيح! 🎉"
+                      : "أووو! الجواب ماشي هو هادا 😅"}
                   </p>
                 </motion.div>
               )}
 
               {showFeedback && (
-                <button
-                  onClick={handleNext}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
-                >
-                  Next Question
-                </button>
+                <div className="text-center">
+                  <button
+                    onClick={handleNext}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow"
+                  >
+                    السؤال الموالي
+                  </button>
+                </div>
               )}
             </div>
           ) : (
-            <div className="text-center py-8">
-              <i className="fas fa-trophy text-yellow-500 text-5xl mb-4"></i>
-              <h3 className="text-2xl font-bold mb-2">Great Job!</h3>
-              <p className="text-gray-600 mb-6">
-                You completed the sample quiz. Imagine hundreds more like this tailored to your child&apos;s level!
+            <div className="text-center">
+              <div className="text-5xl mb-4">🏆</div>
+              <h3 className="text-2xl font-bold mb-2">برافو عليك!</h3>
+              <p className="text-gray-700 mb-6">
+                كملتي الكويز النموذجي. تخيل مئات بحالو مصممين حسب مستوى ولدك!
               </p>
-              <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
-                Start Full Experience
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow">
+                جرب المنصة كاملة
               </button>
             </div>
           )}

@@ -1,6 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import { FaStar, FaStarHalfAlt, FaCheck } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const HowItWorksSection = (props: any) => {
   const lang = props.lang;
@@ -10,10 +9,10 @@ const HowItWorksSection = (props: any) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            How Learning Fun Hub Works
+            كيفاش خدام Learning Fun Hub
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Simple steps to get your child excited about learning
+            خطوات بسيطة باش وليدك يتحمس للتعلم 🎉
           </p>
         </div>
 
@@ -21,20 +20,20 @@ const HowItWorksSection = (props: any) => {
           {[
             {
               step: 1,
-              title: "Sign Up",
-              desc: "Create an account and tell us about your child's age and interests.",
+              title: "سجل",
+              desc: "صاوب حساب و عرّفنا على السن و الاهتمامات ديال وليدك.",
               color: "blue",
             },
             {
               step: 2,
-              title: "Personalize Learning",
-              desc: "Our system adapts to your child's skill level and learning style.",
+              title: "خصص التعلم",
+              desc: "النظام ديالنا كيتأقلم مع المستوى و طريقة التعلم ديال ولدك.",
               color: "green",
             },
             {
               step: 3,
-              title: "Watch Them Learn",
-              desc: "See progress reports and enjoy your child's excitement for learning.",
+              title: "تفرج كيفاش كيتعلم",
+              desc: "شوف التقارير و فرح مع وليدك كيفاش متحمس للتعلم 🎯",
               color: "purple",
             },
           ].map(({ step, title, desc, color }) => (
@@ -61,21 +60,21 @@ const TestimonialsSection = (props: any) => {
       initials: "SM",
       name: "Sarah M.",
       stars: 5,
-      text: "My 7-year-old actually asks to do the math games now! His grades have improved and he's so much more confident.",
+      text: "ولدِي عندو 7 سنين و ولى هو اللي كيطالب باش يدير ألعاب الحساب! النقاط ديالو طلعو و ولى واثق من راسو.",
       color: "blue",
     },
     {
       initials: "DJ",
       name: "David J.",
       stars: 5,
-      text: "The storytelling tools have been amazing for my daughter's creativity and vocabulary. She writes her own stories now!",
+      text: "أدوات السرد القصصي عجبو بنتي بزاف، وولات كتكتب قصص بوحدها! زادت في الخيال و الكلمات.",
       color: "green",
     },
     {
       initials: "PT",
       name: "Priya T.",
       stars: 4.5,
-      text: "Finally an educational app that doesn't feel like a battle to get my son to use. The science games are his favorite.",
+      text: "أخيييراً تطبيق تعليمي ماشي خصني نغوت باش يستعملو! ألعاب العلوم هوما المفضلين عند ولدي.",
       color: "purple",
     },
   ];
@@ -85,11 +84,10 @@ const TestimonialsSection = (props: any) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            What Parents Are Saying
+            آش كيقولو الآباء
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Don&apos;t just take our word for it - hear from parents who&apos;ve seen the
-            difference
+            ماشي غير حنا اللي كنقولوها - سمع من الآباء اللي شافو الفرق 👨‍👩‍👧‍👦
           </p>
         </div>
 
